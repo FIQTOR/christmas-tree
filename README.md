@@ -2,6 +2,8 @@
 
 Welcome to the Christmas Tree project! This repository hosts the codebase for a festive website featuring a beautifully animated Christmas tree. Spread holiday cheer with this interactive and visually appealing decoration!
 
+<img src="./thumbnail.png" />
+
 ## Table of Contents
 - [Introduction](#introduction)
 - [Technologies Used](#technologies-used)
