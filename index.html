@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Merry Christmas</title>
+    <link rel="shortcut icon" href="icon.ico" type="image/x-icon">
+
+    <style>
+        body {
+            background-color: #151522;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: 5s;
+        }
+
+
+        .container {
+            width: 100%;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        button {
+            cursor: pointer;
+            position: relative;
+            width: 250px;
+            height: 250px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: none;
+            border: none;
+        }
+
+        button div {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            background: white;
+            border-radius: 100%;
+            filter: blur(150px);
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            animation: mystery-box-animation 3s infinite ease-in-out;
+        }
+
+        @keyframes mystery-box-animation {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-50px);
+                opacity: 30%;
+            }
+        }
+
+        .transition-background {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            min-height: 100vh;
+            background-color: transparent;
+            transition: 0.5s;
+            background-color: #151522;
+            opacity: 0;
+            z-index: -10;
+        }
+
+        .close {
+            opacity: 1;
+            z-index: 10;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <button id="box">
+            <div></div>
+            <img src="mystery-box.png" alt="">
+        </button>
+    </div>
+
+    <div id="transition" class="transition-background"></div>
+
+    <script>
+        document.getElementById('box').addEventListener('click', function () {
+            document.getElementById('transition').classList.add('close')
+
+            setTimeout(() => {
+                window.location.href = 'merry-christmas.html'
+            }, 500);
+        })
+    </script>
+</body>
+
+</html>
